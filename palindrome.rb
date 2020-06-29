@@ -1,8 +1,8 @@
 require 'sinatra'
 
 def check_palindrome(word)
-  	word == word.reverse
-  end
+  word == word.reverse
+end
 
 def count_palindromes(text)
   #Se establece como precondición que todas palabras ingresadas son en minúscula y sin acentos
@@ -24,7 +24,7 @@ end
 post '/' do
   text = params[:text]
   count = count_palindromes(text)
-  'Cantidad de palabras magicas detectadas:' + ' ' + count.to_s
+  count.to_s
 end
 
 #Casos de prueba:

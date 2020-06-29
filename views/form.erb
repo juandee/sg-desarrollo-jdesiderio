@@ -18,8 +18,8 @@
           url:'/',
           type:'post',
           data:$('#myForm').serialize(),
-          success:function(response){
-            $('#result').html(response);
+          success:function(data){
+            $('#result').text('Cantidad de palabras magicas detectadas: ').append(data);
           }
         });
       });
